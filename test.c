@@ -3,19 +3,15 @@
 
 int main(int argc, char *argv[])
 {
-    float temperature;
-
-    if (argc > 1)
+    // int i, j;
+    for (int i = 1; i <= 2; ++i)
     {
-        temperature = atof(argv[1]);
+        printf("Outer: %d\n", i);
+        for (int j = 1; j <= 3; ++j)
+        {
+            printf("Inner: %d\n", j);
+        }
     }
-    else
-    {
-        printf("Please provide a temperature in Ferinhieight.\n");
-        scanf("%f", &temperature);
-    }
-
-    printf("%d\n", temperature > 70 && temperature < 85);
 
     return 0;
 }
