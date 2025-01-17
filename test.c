@@ -3,15 +3,11 @@
 
 int main(int argc, char *argv[])
 {
-    // int i, j;
-    for (int i = 1; i <= 2; ++i)
-    {
-        printf("Outer: %d\n", i);
-        for (int j = 1; j <= 3; ++j)
-        {
-            printf("Inner: %d\n", j);
-        }
-    }
+    int num = 55;
+    int *ptr = &num;
+    printf("age: %d\n", num);
+    printf("pointer %p\n", &num);
+    printf("pointer %d\n", *ptr);
 
     return 0;
 }
