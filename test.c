@@ -1,13 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Global X
+int x = 57;
+
+void greeting()
+{
+    int x = 90;
+    printf("X is %d\n", x);
+}
+
 int main(int argc, char *argv[])
 {
-    int nums[4] = {1, 2, 50, 4};
-    for (int i = 0; i < sizeof(nums) / sizeof(nums[0]); i++)
-    {
-        printf("%d\n", *(nums + i));
-    }
-
+    greeting();
+    printf("X is %d\n", x);
     return 0;
 }
