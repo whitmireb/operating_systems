@@ -3,11 +3,11 @@
 
 int main(int argc, char *argv[])
 {
-    int num = 55;
-    int *ptr = &num;
-    printf("age: %d\n", num);
-    printf("pointer %p\n", &num);
-    printf("pointer %d\n", *ptr);
+    int nums[4] = {1, 2, 50, 4};
+    for (int i = 0; i < sizeof(nums) / sizeof(nums[0]); i++)
+    {
+        printf("%d\n", *(nums + i));
+    }
 
     return 0;
 }
