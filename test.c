@@ -1,18 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Global X
-int x = 57;
-
-void greeting()
-{
-    int x = 90;
-    printf("X is %d\n", x);
-}
-
 int main(int argc, char *argv[])
 {
-    greeting();
-    printf("X is %d\n", x);
+    FILE *fptr;
+
+    fptr = fopen("text.txt", "a");
+    char s[1];
+
+    while (fgets(s, sizeof(s) / sizeof(s[0]), fptr))
+    {
+        printf("%s", s);
+    }
+
+    fclose(fptr);
+
     return 0;
 }
