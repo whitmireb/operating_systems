@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(int)
+int main()
 {
     float temperature;
     printf("Please provide a temperature in Ferinhieight.\n");

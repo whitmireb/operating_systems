@@ -3,17 +3,10 @@
 
 int main(int argc, char *argv[])
 {
-    FILE *fptr;
-
-    fptr = fopen("text.txt", "a");
-    char s[1];
-
-    while (fgets(s, sizeof(s) / sizeof(s[0]), fptr))
-    {
-        printf("%s", s);
-    }
-
-    fclose(fptr);
+    int *students;
+    int numStudents = 12;
+    students = calloc(numStudents, sizeof(*students));
+    printf("%ld\n", numStudents * sizeof(*students));
 
     return 0;
 }
